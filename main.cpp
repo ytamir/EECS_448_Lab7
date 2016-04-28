@@ -75,7 +75,7 @@ void checkEmpty()
         }
         else
         {
-          std::cout<< "There is an issue and the size is not 0\n";
+          std::cout<< "There is a bug because the size is not 0\n";
         }
 
 
@@ -111,8 +111,79 @@ void checkMultipleElements()
     std::cout<<"removeFront\n";
     demoLinkedList->removeBack();
     printContents();
+    if(demoLinkedList->isEmpty()==false)
+    {
+      std::cout<<"There is a bug here with isEmpty\n";
+    }
+
+    std::cout<<"Add a 5 to the front of the list\n";
+    demoLinkedList->addFront(5);
+    printContents();
     checkEmpty();
 
+      std::cout<<"Add a 6 to the front of the list\n";
+    demoLinkedList->addFront(6);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 7 to the front of the list\n";
+    demoLinkedList->addFront(7);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 8 to the front of the list\n";
+    demoLinkedList->addFront(8);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 9 to the front of the list\n";
+    demoLinkedList->addFront(9);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 10 to the front of the list\n";
+    demoLinkedList->addFront(10);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 4 to the back of the list\n";
+    demoLinkedList->addBack(4);
+    printContents();
+    checkEmpty();
+
+      std::cout<<"Add a 5 to the back of the list\n";
+    demoLinkedList->addBack(5);
+    printContents();
+    checkEmpty();
+
+  std::cout<<"Add a 6 to the back of the list\n";
+    demoLinkedList->addBack(6);
+    printContents();
+    checkEmpty();
+
+std::cout<<"There is a bug that addback is not adding the parameter sent to it, it is adding the front value to the back of the list";
+
+
+    std::cout<<"Removeback\n";
+    demoLinkedList->removeBack();
+    printContents();
+    checkEmpty();
+
+    std::cout<<"removefront\n";
+    demoLinkedList->removeFront();
+    printContents();
+    checkEmpty();
+
+    std::cout<<"removefront\n";
+    demoLinkedList->removeFront();
+    printContents();
+    checkEmpty();
+
+    std::cout<<"Removeback\n";
+    demoLinkedList->removeBack();
+    printContents();
+    std::cout<<"There is a bug here because removefront and removeback are removing elements from the back of the list\n";
+    checkEmpty();
 
 
 
